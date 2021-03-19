@@ -1,0 +1,21 @@
+body {
+  width: 100vw;
+  color: #242d38;
+  background-color: #efd592;
+}
+body h1,
+body h2,
+body h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+}
+body p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,1 +1,17 @@
 @use 'reset';
+@use 'variables' as *;
+
+.app {
+  display: flex;
+
+  .left-side,
+  .right-side {
+    width: calc(50vw - 100px);
+    height: calc(100vh - 100px);
+    margin: 50px 0 50px 50px;
+  }
+
+  .left-side {
+    background-color: $color;
+  }
+}

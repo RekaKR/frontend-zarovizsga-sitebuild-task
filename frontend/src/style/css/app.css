@@ -7,4 +7,17 @@ body,
   box-sizing: border-box;
 }
 
+.app {
+  display: flex;
+}
+.app .left-side,
+.app .right-side {
+  width: calc(50vw - 100px);
+  height: calc(100vh - 100px);
+  margin: 50px 0 50px 50px;
+}
+.app .left-side {
+  background-color: #242d38;
+}
+
 /*# sourceMappingURL=app.css.map */
