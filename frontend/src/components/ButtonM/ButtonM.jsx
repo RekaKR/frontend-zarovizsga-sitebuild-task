@@ -5,9 +5,13 @@ import Button from '@material-ui/core/Button';
 const MyButton = styled(Button)({
   height: 48,
   color: 'rgb(36, 45, 56)',
+  margin: '20px 0 0 -5px',
+  paddingRight: 30,
   fontWeight: 'bold',
-  fontSize: '1rem',
-  padding: '0 30px',
+  fontStyle: '"Open Sans", sans-serif',
+  fontWeight: 700,
+  fontSize: '20px',
+  letterSpacing: 4,
 });
 
 function ButtonM() {

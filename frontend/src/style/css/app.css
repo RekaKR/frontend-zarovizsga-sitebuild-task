@@ -10,14 +10,46 @@ body,
 .app {
   display: flex;
 }
+@media (max-width: 1160px) {
+  .app {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
 .app .left-side,
 .app .right-side {
-  width: calc(50vw - 100px);
   height: calc(100vh - 100px);
   margin: 50px 0 50px 50px;
 }
 .app .left-side {
+  width: calc(52vw - 100px);
   background-color: #242d38;
+}
+@media (max-width: 1160px) {
+  .app .left-side {
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+  }
+}
+.app .right-side {
+  width: calc(48vw - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+@media (max-width: 1160px) {
+  .app .right-side {
+    width: calc(100vw - 100px);
+    margin: auto;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 414px) {
+  .app .right-side {
+    width: 85vw;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

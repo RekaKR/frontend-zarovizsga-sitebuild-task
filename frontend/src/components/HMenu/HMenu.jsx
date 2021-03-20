@@ -7,13 +7,31 @@ import MenuItem from '@material-ui/core/MenuItem';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const useStyles = makeStyles({
+  cont: {
+    width: '85px',
+    height: '85px',
+    backgroundColor: 'rgb(239, 213, 146)',
+    borderRadius: '50%',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    '@media (max-width: 600px)': {
+      width: '75px',
+      height: '75px',
+    },
+    '@media (max-width: 435px)': {
+      width: '65px',
+      height: '65px',
+    }
+  },
   menu: {
     width: '100px',
     height: '100px',
     position: 'absolute',
-    top: '30px',
-    right: '30px',
-    '@media (max-width: 700px)': {
+    top: '25px',
+    right: '25px',
+    '@media (max-width: 1160px)': {
       width: '80px',
       height: '80px',
     },
@@ -31,11 +49,9 @@ const useStyles = makeStyles({
     minWidth: '60px',
     height: '100%',
     color: 'rgb(239, 213, 146)',
-    stroke: "rgb(239, 213, 146)",
     backgroundColor: 'rgb(36, 45, 56)',
     border: 'rgb(239, 213, 146)',
     '&:hover': {
-      stroke: 'rgb(36, 45, 56)',
       fill: 'rgb(36, 45, 56)',
       color: 'rgb(36, 45, 56)',
       backgroundColor: 'rgb(239, 213, 146)',
@@ -44,7 +60,7 @@ const useStyles = makeStyles({
   },
   icon: {
     fontSize: '70px',
-    '@media (max-width: 700px)': {
+    '@media (max-width: 1160px)': {
       fontSize: '50px',
     },
     '@media (max-width: 600px)': {
@@ -77,9 +93,11 @@ function HMenu() {
 
   return (
     <div className={classes.menu}>
+      <div className={classes.cont}></div>
       <IconButton className={classes.iconB} aria-label="more" aria-controls="long-menu" aria-haspopup="true" onClick={handleClick}>
         <MenuIcon className={classes.icon} />
       </IconButton>
+
       <Menu id="long-menu" anchorEl={anchorEl} keepMounted open={open} onClose={handleClose} PaperProps={{
         style: {
           width: '150px',

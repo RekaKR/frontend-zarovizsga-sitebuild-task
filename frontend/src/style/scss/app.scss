@@ -4,14 +4,43 @@
 .app {
   display: flex;
 
+  @media (max-width: 1160px) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
   .left-side,
   .right-side {
-    width: calc(50vw - 100px);
     height: calc(100vh - 100px);
     margin: 50px 0 50px 50px;
   }
 
   .left-side {
+    width: calc(52vw - 100px);
     background-color: $color;
+
+    @media (max-width: 1160px) {
+      width: 100vw;
+      height: 50vh;
+      margin: 0;
+    }
+  }
+
+  .right-side {
+    width: calc(48vw - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    @media (max-width: 1160px) {
+      width: calc(100vw - 100px);
+      margin: auto;
+      justify-content: flex-start;
+    }
+
+    @media (max-width: 414px) {
+      width: 85vw;
+    }
   }
 }
